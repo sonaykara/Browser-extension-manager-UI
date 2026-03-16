@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 
 const App = () => {
   return (
-    <div className="section-container bg-gray-900">
+    <div className="section-container">
       <Header></Header>
       <ExtensionsFilters></ExtensionsFilters>
     </div>
