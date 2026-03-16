@@ -1,9 +1,10 @@
-import React from 'react'
+
+import Header from './Components/Header'
 
 const App = () => {
   return (
-    <div className='text-2xl'>
-      Browser-extension-manager-UI
+    <div className='section-container'>
+      <Header></Header>
     </div>
   )
 }
