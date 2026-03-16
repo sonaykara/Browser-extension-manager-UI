@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button";
-import ToggleButton from "../Components/ToggleButton";
+import Button from "../UI/Button";
+import ToggleButton from "./ToggleButton";
 
 const ExtensionCard = () => {
   return (

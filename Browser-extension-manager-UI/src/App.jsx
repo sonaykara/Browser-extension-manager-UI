@@ -1,6 +1,6 @@
 import ExtensionsFilters from "./Components/ExtensionsFilter";
 import Header from "./Components/Header";
-import ExtensionCard from "./UI/ExtensionCard";
+import ExtensionCard from "./Components/ExtensionCard";
 
 const App = () => {
   return (
