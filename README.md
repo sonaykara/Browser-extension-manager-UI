@@ -1,1 +1,1 @@
-https://browser-extension-manager-ui-pi-two.vercel.app/
+Proje Vercel Url = https://browser-extension-manager-ui-pi-two.vercel.app/
