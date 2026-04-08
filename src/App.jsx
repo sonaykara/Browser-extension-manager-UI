@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [extensions, setExtensions] = useState([]);
   useEffect(() => {
-    fetch("../public/data/extensionsMock.json")
+    fetch("/data/extensionsmock.json")
       .then((res) => res.json())
       .then((data) => {
         setExtensions(data)
@@ -17,7 +17,7 @@ const App = () => {
   const [filterType, setFilterType] = useState("all");
     const extensionList = extensions.filter((items) => {
       if (filterType === "all") {
-        return extensions
+        return true
       } else if (filterType === "active") {
         return items.isActive === true
       } else if (filterType === "inactive") {
