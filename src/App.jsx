@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [extensions, setExtensions] = useState([]);
   useEffect(() => {
-    fetch("../src/data/extensionsMock.json")
+    fetch("../public/data/extensionsMock.json")
       .then((res) => res.json())
       .then((data) => {
         setExtensions(data)
