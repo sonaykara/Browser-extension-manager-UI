@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 import ToggleButton from "./ToggleButton";
 
 const ExtensionCard = ({data}) => {
-  console.log(data)
+  console.log(data.isActive)
   return (
     <div className="flex flex-col bg-gray-600 rounded-2xl p-4 justify-between min-h-[160px] min-w-[160px]">
       <div className="flex flex-col pt-4 rounded-2xl bg-gray-600 gap-8">
@@ -24,7 +24,7 @@ const ExtensionCard = ({data}) => {
                 "bg-gray-500 text-white rounded-2xl px-4 py-1 hover:bg-gray-600 transition",
             }}
           ></Button>
-          <ToggleButton></ToggleButton>
+          <ToggleButton data = {data}></ToggleButton>
         </div>
       </div>
     </div>

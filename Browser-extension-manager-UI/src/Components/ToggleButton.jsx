@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const ToggleButton = () => {
-  const [isOn, setIsOn] = useState(false);
-
+const ToggleButton = ({data}) => {
+  console.log(data)
+  const isActived  = data.isActive
+  const [isOn, setIsOn] = useState(isActived);
   return (
-    <button
+    <button 
       type="button"
       onClick={() => setIsOn(!isOn)}
       className={`relative w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out ${
