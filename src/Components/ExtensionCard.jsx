@@ -3,6 +3,14 @@ import Button from "../UI/Button";
 import ToggleButton from "./ToggleButton";
 
 const ExtensionCard = ({data , setExtensions , extensions }) => {
+  const handleRemove = () => {
+    const removedİtems = extensions.filter((item) => {
+      return item.id !== data.id
+      
+
+    })
+    setExtensions(removedİtems)
+  }
   return (
     <div className="flex flex-col bg-gray-600 rounded-2xl p-4 justify-between min-h-[160px] min-w-[160px]">
       <div className="flex flex-col pt-4 rounded-2xl bg-gray-600 gap-8">
@@ -17,6 +25,7 @@ const ExtensionCard = ({data , setExtensions , extensions }) => {
         </div>
         <div className="flex justify-between items-center">
           <Button
+            onClick={handleRemove}
             config={{
               name: "Remove",
               className:
