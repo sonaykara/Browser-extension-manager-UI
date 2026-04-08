@@ -2,8 +2,7 @@ import React from "react";
 import Button from "../UI/Button";
 import ToggleButton from "./ToggleButton";
 
-const ExtensionCard = ({data}) => {
-  console.log(data.isActive)
+const ExtensionCard = ({data , setExtensions , extensions }) => {
   return (
     <div className="flex flex-col bg-gray-600 rounded-2xl p-4 justify-between min-h-[160px] min-w-[160px]">
       <div className="flex flex-col pt-4 rounded-2xl bg-gray-600 gap-8">
@@ -24,7 +23,7 @@ const ExtensionCard = ({data}) => {
                 "bg-gray-500 text-white rounded-2xl px-4 py-1 hover:bg-gray-600 transition",
             }}
           ></Button>
-          <ToggleButton data = {data}></ToggleButton>
+          <ToggleButton data = {data} setExtensions = {setExtensions} extensions = {extensions}></ToggleButton>
         </div>
       </div>
     </div>

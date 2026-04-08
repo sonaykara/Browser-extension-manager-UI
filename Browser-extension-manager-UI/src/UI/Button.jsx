@@ -1,6 +1,6 @@
-const Button = ({ config }) => {
+const Button = ({ config , onClick }) => {
 
-  return <button className={config.className}>{config.name}</button>;
+  return <button onClick={onClick} className={config.className}>{config.name}</button>;
 };
 
 export default Button;

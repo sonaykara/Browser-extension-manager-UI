@@ -1,13 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const ToggleButton = ({data}) => {
-  console.log(data)
-  const isActived  = data.isActive
-  const [isOn, setIsOn] = useState(isActived);
+const ToggleButton = ({ data, setExtensions, extensions }) => {
+  const active = data.isActive;
+  const [isOn, setIsOn] = useState(active);
+  const handleToggle = () => {
+    const nextStatus = !isOn;
+    setIsOn(nextStatus);
+    const updatedData = {
+      ...data,
+      isActive: nextStatus,
+    };
+
+    setExtensions((extensions) =>
+      extensions.map((item) => (item.id === data.id ? updatedData : item)),
+    );
+  };
+
   return (
-    <button 
+    <button
       type="button"
-      onClick={() => setIsOn(!isOn)}
+      onClick={handleToggle}
       className={`relative w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ease-in-out ${
         isOn ? "bg-green-500" : "bg-slate-700"
       }`}
